@@ -1,48 +1,33 @@
-/*moblie version*/
-* {
-  box-sizing: border-box;
-  margin-top:40px;
+*{
+  margin-top: 20px;
   padding: 0px;
+  box-sizing: border-box;
 }
-h1 {
+/******BASE STYLE *************/
+h1{
+  background-color: #432AFe42;
+  width: 360px;
   text-align: center;
-  font-family: sans-serif;
-  color: white;
-  border: 1px solid black;
-  background-color: #9023fb;
-  padding: 5px;
-  margin: 12px;
+  border:2px solid black;
+  font-family: serif;
 }
 h2{
   text-align:center;
-
-  border: 2px solid black;
-  padding-top: 0px;
-  margin-left:1px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  padding-top:0px;
+  margin-top:0px;
   background-color:#90f7b3;
   height: 30px;
   width:120px;
   float:right;
-  position: relative;
-  top:-44.5px;
-  left: 4px;
 }
 .container{
-  margin: 2px;
-  width: 100%;
-  height: auto;
-  position: relative;
-  top:40px;
-
+  width: 360px;
+  padding: 2px;
 }
-
 section{
-  width:99.5%;
-  height:auto;
-  border :3px solid black;
-  margin: 1px;
-  padding:2px;
-  float: left;
+  border:2px solid black;
 }
 #section1{
   background-color:yellow;
@@ -53,26 +38,54 @@ section{
 #section3{
   background-color:orange;
 }
-@media (min-width:992px) {
+/************** LARGE DEVICES *************/
+@media (min-width:992px){
+  .container{
+    width: 100%;
+  }
   section{
-    width: 33%;
+    width:30%;
     float: left;
+    margin-left:30px;
+  }
+  h1{
+    width: 100%;
   }
 }
-@media (min-width:768px) and (max-width:991px){
+/************** MEDIUM DEVICES *************/
+@media (min-width:768px) and (max-width:991px) {
+  .container{
+    width: 100%;
+    padding-left: 10px;
+  }
+  h1{
+    width: 100%;
+  }
+  h2{
+    width:120px;
+    position: relative;
+    top:-5px;
+    left: 5px;
+
+  }
+  section{
+    width: 48%;
+    margin: 6px;
+    padding: 5px;
+  }
   #section1{
-    width: 49.5%;
+    width: 48%;
     float: left;
+    padding-left: 4px;
   }
   #section2{
-    width: 49.5%;
+    width: 48%;
     float: left;
-  }
+    padding-left: 4px;
+    }
   #section3{
-    width: 99.5%;
-    height:124px;
-    position: relative;
-    top:1px;
-
+    width: 98%;
+    height:auto;
+    float: left;
   }
 }
